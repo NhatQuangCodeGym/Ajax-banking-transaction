@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<th:block th:fragment="modalWithdraw">
+    <div id="modalWithdraw" class="modal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Modal WithDraw Customer</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-alert-danger hide">
+                        <label id="transactionAmountWd-error" class="error" for="transAmountWithDr">
+                            Transaction amount must be multiple of 5
+                        </label>
+                    </div>
+                    <form id ="frmWithdraw">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <input type="hidden">
+                                <label for="cusIdWithDr" class="form-label fw-bold">Customer ID
+                                </label>
+                                <input type="text" class="form-control" id="cusIdWithDr" disabled >
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="fullNameWithDr" class="form-label fw-bold">Full Name
+                                </label>
+                                <input type="text" class="form-control" id="fullNameWithDr" disabled >
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="balanceWithDr" class="form-label fw-bold">Current balance ($)
+                                </label>
+                                <input type="tel" class="form-control" id="balanceWithDr" disabled >
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="transAmountWithDr" class="form-label fw-bold">Transaction Amount ($)
+                                </label>
+                                <input type="text" class="form-control" id="transAmountWithDr" >
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" id="btnWithdraw" class="btn btn-outline-secondary">
+                        WithDraw
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</th:block>
+
+
